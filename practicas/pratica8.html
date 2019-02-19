@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+                var precio=0;
+                var m1 = parseInt(document.getElementById("num1").value);
+                if (m1<=300){
+                    precio=precio+30;
+                    document.getElementById("sin").innerHTML = precio;
+                }else if(m1<=1000){
+                    var dife=m1-300;
+                    var mas=dife*0.15;
+                    precio=30+mas;
+                    document.getElementById("sin").innerHTML = precio;
+                }else{
+                    var dife=m1-1000;
+                    var mas=dife*0.10;
+                    precio=135+mas;
+                    document.getElementById("sin").innerHTML = precio;
+                }
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Cuantos kilometros anduvo en el automovil</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>El precio es: </p>
+        <p id="sin"></p>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+	var m1 = document.getElementById("num1").value;
+	var r = m1*1500;
+
+                
+	
+            if(m1 < 4){
+                var res=(r*12.5)/100;
+                var des=r-res; 
+            }else
+            if(m1 < 8){
+                var res=(r*20)/100;
+                var des=r-res; 
+            }else{
+                var res=(r*31.5)/100;
+                var des=r-res; 
+            };
+            
+            document.getElementById("con").innerHTML = des;
+            document.getElementById("sin").innerHTML = r;
+                };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Las camisas valen 1500$, cuantas quiere</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>Sin descuento:</p>
+        <p id="sin"></p>
+        <p>Con descuento:</p>
+        <p id="con"></p>
+    </body>
+</html>

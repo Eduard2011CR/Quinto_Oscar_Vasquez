@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+         
+            function multiplicar(){
+                                var m1 = parseInt(document.getElementById("num1").value);
+                   if((m1>=1000) || (m1<=100)){
+                alert("Pon un numero de tres digitos");
+            }else{
+
+                    var pri= m1/100;
+                var pri1=Math.trunc(pri);
+                document.getElementById("sin").innerHTML = pri1;
+                var seg= m1%10;
+                var seg1=Math.trunc(seg);
+                document.getElementById("con").innerHTML = seg1;
+            if(seg1==pri1){
+                document.getElementById("es").innerHTML = "Es capicua";
+            }else{
+                document.getElementById("es").innerHTML = "No es capicua";
+                
+            }
+            }
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Digite un numero de 3 cifras</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>Primer numero: </p>
+        <p id="sin"></p>
+       <p>Segundo numero: </p>
+        <p id="con"></p>
+        <p></p>
+        <p id="es"></p>
+
+    </body>
+</html>

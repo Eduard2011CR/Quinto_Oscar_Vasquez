@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+	var m1 = document.getElementById("num1").value;
+                
+                var horas=m1/60;
+                
+                var r=horas*2.5;    
+                
+            document.getElementById("sin").innerHTML = r;
+                
+            
+            
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Cuantos minutos lleva en el parqueo</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>Debes de pagar:</p>
+        <p id="sin"></p>
+
+    </body>
+</html>

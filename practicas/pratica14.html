@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía inordenactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+
+
+            function multiplicar(){
+
+                var orden = new Array(2);
+                var orden1 = new Array(2);
+                var m1 = parseInt(document.getElementById("num1").value);
+                var mayor=0;
+                var asd=0;
+                var p=0;
+
+                if((m1>=1000) || (m1<=100)){
+                  alert("Pon un numero de tres digitos");
+                }else{
+                  orden[0]= parseInt(m1/100);
+                  orden1[0]=Math.trunc(orden[0]);
+                   document.getElementById("pri").innerHTML = orden1[0];
+
+                   orden[1]= parseInt((m1/10)%10);
+                   orden1[1]=Math.trunc(orden[1]);
+                   document.getElementById("seg").innerHTML = orden1[1];
+
+                   orden[2]= parseInt(m1%10);
+                   orden1[2]=Math.trunc(orden[2]);
+                   document.getElementById("ter").innerHTML = orden1[2];
+                }
+
+
+
+
+                for (var a = 0; a < orden1.length; a++) {
+                  for (var b = 0; b < orden.length; b++) {
+
+                    if (mayor<=orden[b]) {
+                      mayor=orden[b];
+                      asd=orden[b];
+                      p=b;
+                    }
+                  }
+
+                orden1[a]=asd;
+                mayor=0;
+                orden[p]=0
+                document.getElementById("alto").innerHTML =  orden1[0]+""+orden1[1]+""+orden1[2];
+                }
+
+
+
+
+
+            };
+
+        </script>
+    </head>
+    <body>
+<p>Digite un numero de tres digitos</p>
+<form id="multiplicar">
+    <input type="number" id="num1" placeholder="Numero">
+
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>El numero 1 es: </p>
+       <p id="pri"></p>
+
+       <p>El numero 3 es: </p>
+       <p id="seg"></p>
+
+       <p>El numero 2 es: </p>
+       <p id="ter"></p>
+
+       <p>El numero mayor es: </p>
+       <p id="alto"></p>
+    </body>
+</html>

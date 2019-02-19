@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+                var m1 = parseInt(document.getElementById("num1").value);
+                var m2 = parseInt(document.getElementById("num2").value);
+                var m3 = parseInt(document.getElementById("num3").value);
+
+                if(m1==m2 && m2==m3 && m1==m3){
+                 document.getElementById("sin").innerHTML = "Equilatero";                   
+                }else if((m1==m2 && m2!=m3 && m1!=m3) || (m1==m3 && m2!=m3 && m1!=m2) || (m2==m3 && m1!=m3 && m1!=m2)){
+                 document.getElementById("sin").innerHTML = "Isoceles";                   
+                }else{
+                 document.getElementById("sin").innerHTML = "Escaleno";    
+                }
+                    
+                
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Digite las 3 longitudes</p>
+<form id="multiplicar">
+    <input type="num" id="num1">
+    <input type="num" id="num2">
+    <input type="num" id="num3">
+
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>El triangulo es: </p>
+        <p id="sin"></p>
+
+    </body>
+</html>

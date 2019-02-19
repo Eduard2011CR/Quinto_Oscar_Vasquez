@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+                
+                var pri=0; var seg=0;
+                var m1 = parseInt(document.getElementById("num1").value);
+                var m2 = parseInt(document.getElementById("num2").value);
+                if (m1>200){
+                    pri=1;
+                }else{
+                    pri=0;
+                }
+                if(m2>1000){
+                    seg=1;
+                }else{
+                    seg=0;
+                }
+                
+                if(pri==1 && seg==1){
+                    document.getElementById("sin").innerHTML = "8";   
+                }else 
+                if(pri==1 && seg==0){
+                    document.getElementById("sin").innerHTML = "6"; 
+                }else 
+                if(pri==0 && seg==1){
+                    document.getElementById("sin").innerHTML = "7"; 
+                }else 
+                if(pri==0 && seg==0){
+                    document.getElementById("sin").innerHTML = "5"; 
+                }
+                
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Digite los tornillos defectusos y los que realizo</p>
+<form id="multiplicar">
+    <input type="num" id="num1" placeholder="Defectuosos">
+    <input type="num" id="num2" placeholder="Creados">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>El frado es: </p>
+        <p id="sin"></p>
+
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+            
+            function multiplicar(){
+	var m1 = parseInt(document.getElementById("num1").value);
+                ope= m1*2000;
+                if(m1<4){
+                    var poco=(ope*10)/100;
+                    var diez=ope-poco;
+                    document.getElementById("pagar").innerHTML = ope;
+                    document.getElementById("sin").innerHTML = poco;
+                    document.getElementById("monto").innerHTML = diez;
+                    var can= 12*m1;
+                    document.getElementById("cantidad").innerHTML = can;
+                }else{
+                    var mucho=(ope*15)/100;
+                    var quin=ope-mucho;
+                    document.getElementById("pagar").innerHTML = ope;
+                    document.getElementById("sin").innerHTML = mucho;
+                    document.getElementById("monto").innerHTML = quin;
+                    var can1= 12*m1;
+                    can1=can1+m1;
+                    document.getElementById("cantidad").innerHTML = can1;
+                }
+                        
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Cuantas docenas quiere, cada docena vale 2000$?</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>El monto sin descuento es: </p>
+        <p id="pagar"></p>
+        <p>De descuento es: </p>
+        <p id="sin"></p>
+        <p>Debes de pagar: </p>
+        <p id="monto"></p>
+        <p>Te llevas: </p>
+        <p id="cantidad"></p>
+    </body>
+</html>

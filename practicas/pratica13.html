@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+
+
+            function multiplicar(){
+
+                var m1 = parseInt(document.getElementById("num1").value);
+                var votos = new Array(2);
+                var porce = new Array(2);
+                var nombres = ["Juan", "Pedro", "Maria"];
+                votos[0]= parseInt(document.getElementById("num1").value);
+                votos[1]= parseInt(document.getElementById("num2").value);
+                votos[2]= parseInt(document.getElementById("num3").value);
+                var total= (votos[0])+(votos[1])+(votos[2]);
+                porce[0]=parseInt((votos[0]*100)/total);
+                porce[1]=parseInt((votos[1]*100)/total);
+                porce[2]=parseInt((votos[2]*100)/total);
+
+                var mayor= new Array(1);
+
+
+var asd=0;
+var may=0;
+var p=0;
+  if ((porce[0]==porce[1] && porce[1]>porce[2]) || (porce[0]==porce[2] && porce[0]>porce[1]) || (porce[1]==porce[2] && porce[1]>porce[0])) {
+      alert("Segunda ronda");
+    if(porce[0]==porce[1] && porce[1]>porce[2]){
+        var pri=prompt("Digite los votos de Juan");
+        var seg=prompt("Digite los votos de Pedro");
+        if (pri==seg) {
+          alert("Se canselan las elecciones");
+        }else{
+          if (pri<seg) {
+            alert("Gano Pedro");
+          }else{
+            alert("Gano Juan");
+          }
+        }
+    }else if (porce[0]==porce[2] && porce[0]>porce[1]) {
+      var pri=prompt("Digite los votos de Juan");
+      var seg=prompt("Digite los votos de Maria");
+      if (pri==seg) {
+        alert("Se canselan las elecciones");
+      }else{
+        if (pri<seg) {
+          alert("Gano Maria");
+        }else{
+          alert("Gano Juan");
+        }
+      }
+    }else if (porce[1]==porce[2] && porce[1]>porce[0]) {
+      var pri=prompt("Digite los votos de Pedro");
+      var seg=prompt("Digite los votos de Maria");
+      if (pri==seg) {
+        alert("Se canselan las elecciones");
+      }else{
+        if (pri<seg) {
+          alert("Gano Maria");
+        }else{
+          alert("Gano Pedro");
+        }
+      }
+    }
+
+
+
+  }else{
+
+        if(porce[0]==porce[1] && porce[1]==porce[2]){
+            alert("se anulan las selecciones");
+        }else{
+        if(porce[0]>51){
+                alert("El ganador es Juan");
+        }else
+        if(porce[1]>51){
+                alert("El ganador es Pedro");
+        }else
+        if(porce[2]>51){
+                alert("El ganador es Maria");
+        }else{
+                alert("Segunda ronda");
+
+  if ((porce[0]>porce[1] && porce[1]>porce[2]) || (porce[0]>porce[2] && porce[0]>porce[1]) || (porce[1]>porce[2] && porce[1]>porce[0])) {
+
+    if(porce[0]>porce[1] && porce[1]>porce[2]){
+        var pri=prompt("Digite los votos de Juan");
+        var seg=prompt("Digite los votos de Pedro");
+        if (pri==seg) {
+          alert("Se canselan las elecciones");
+        }else{
+          if (pri<seg) {
+            alert("Gano Pedro");
+          }else{
+            alert("Gano Juan");
+          }
+        }
+    }else if (porce[0]>porce[2] && porce[0]>porce[1]) {
+      var pri=prompt("Digite los votos de Juan");
+      var seg=prompt("Digite los votos de Maria");
+      if (pri==seg) {
+        alert("Se canselan las elecciones");
+      }else{
+        if (pri<seg) {
+          alert("Gano Maria");
+        }else{
+          alert("Gano Juan");
+        }
+      }
+    }else if (porce[1]>porce[2] && porce[1]>porce[0]) {
+      var pri=prompt("Digite los votos de Pedro");
+      var seg=prompt("Digite los votos de Maria");
+      if (pri==seg) {
+        alert("Se canselan las elecciones");
+      }else{
+        if (pri<seg) {
+          alert("Gano Maria");
+        }else{
+          alert("Gano Pedro");
+        }
+      }
+    }
+            }
+        }
+
+  }
+
+
+
+}};
+
+        </script>
+
+    </head>
+    <body>
+<p>Pon los votos de todos</p>
+<form id="multiplicar">
+    <a>Juan</a>&nbsp;&nbsp;&nbsp;
+  <input type="num" id="num1"><br>
+    <a>Pedro</a>
+  <input type="num" id="num2"><br>
+    <a>Maria</a>
+  <input type="num" id="num3"><br>
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+
+
+    </body>
+</html>

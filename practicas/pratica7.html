@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PRIMEROS PASOS CON BRACKETS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Brackets.">
+        <script language="JavaScript">
+        
+         
+            function multiplicar(){
+                var m1 = parseInt(document.getElementById("num1").value);
+                if(m1>3){
+                    alert("No hubieron mas de tres tiros");
+                    document.getElementById("es").innerHTML = "No hubieron mas de tres tiros";
+                }else if(m1==3){
+                    document.getElementById("es").innerHTML = "Exelente";
+                }else if(m1==2){
+                    document.getElementById("es").innerHTML = "Muy bueno";
+                }else if(m1==1){
+                    document.getElementById("es").innerHTML = "Regular";
+                }else if(m1=0){
+                    document.getElementById("es").innerHTML = "Pesimo";
+                }
+            };
+            
+        </script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<p>Diga cuantos 6 acerto</p>
+<form id="multiplicar">
+  <input type="num" id="num1">
+  <input type="button" id="resultado" onclick="multiplicar()">
+</form>
+       <p>Tu rendimiento fue: </p>
+        <p id="es"></p>
+
+
+    </body>
+</html>
